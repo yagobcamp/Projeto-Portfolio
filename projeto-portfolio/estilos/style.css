@@ -159,19 +159,20 @@ article#video .video-container {
 
 #skill-container .nome {
   font-weight: bold;
-  color: var(--destaque);
+  color: var(--texto);
 }
 
 #skill-container .porcent {
-  font-weight: 100%;
+  font-weight: bold;
   height: 8px;
-  background-color: var(--fundo-principal);
+  color: var(--destaque);
   border-radius: 4px;
 }
 
 #skill-container .barra {
   width: 100%;
-  background-color: var(--destaque-inverso);
+  height: 10px;
+  background-color: var(--fundo-principal);
   border-radius: 10px;
 }
 
@@ -181,4 +182,14 @@ article#video .video-container {
   background-color: var(--destaque-inverso);
   border-radius: 4px;
 }
+
+@media screen and (min-width: 768px){
+  #skill-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
 
