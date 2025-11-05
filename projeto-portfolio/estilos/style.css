@@ -129,7 +129,7 @@ article h2 {
   margin-bottom: 20px;
 }
 
-article#video .video-container {
+.video-container {
   position: relative;
   width: 100%;
   margin: auto;
@@ -210,7 +210,7 @@ article#video .video-container {
   font-weight: bold;
 }
 
-#formacao-container . instituicao {
+#formacao-container .instituicao {
   color: var(--destaque);
   font-size: 1.3em;
 }
@@ -232,10 +232,18 @@ article#video .video-container {
  transition: border-color 0.5s, border-width 0.5s;
 }
 
-#projeto-container .projeto {
+#projeto-container .projeto:hover {
   border-color: var(--destaque);
   border-left-width: 15px;
   cursor: pointer;
+}
+
+#projeto-container .foto {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 footer {
@@ -271,9 +279,6 @@ footer a:hover {
   max-width:20%;
   max-height: 200px;
 }
-
-
-
 
 
 
