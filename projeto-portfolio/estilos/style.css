@@ -23,8 +23,6 @@
   --fundo-card: #ffffff;
 }
 
-
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5em;
@@ -188,11 +186,13 @@ article h2 {
 
 #formacao-container {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 20px;
 }
 
-#formacao-container .curso{
+#formacao-container .curso {
+  display: flex;
+  flex-direction: column-reverse;
   background-color: var(--fundo-principal);
   border-radius: 9px;
   border-left: 5px solid var(--destaque-inverso);
@@ -204,7 +204,6 @@ article h2 {
   border-left-width: 15px;
   border-color: var(--destaque);
   cursor: pointer;
-
 }
 
 #formacao-container .periodo {
@@ -267,6 +266,22 @@ footer a:hover {
 }
 
 @media screen and (min-width: 768px){
+
+  main {
+    grid-template-columns: auto 300px 1fr auto;
+  }
+
+  section#ficha{
+    grid-column: 2/3;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+  }
+
+  section#detalhes {
+    grid-column: 3/4;
+  }
+
   #skill-container {
     grid-template-columns: 1fr 1fr;
   }
