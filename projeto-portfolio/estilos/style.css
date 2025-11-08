@@ -8,87 +8,95 @@
   --fundo-card
 */
 
-* {
+* {    /* Remove espaçamentos padrão e aplica box-sizing uniforme */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+}/* fim*/
 
-:root {
+:root {   /* Define variáveis globais de cores */
+
   --fundo-principal: #f5f5f5;
   --texto: #222222;
   --texto-inverso: #ffffff;
   --destaque: #0077ff;
   --destaque-inverso: #66bbff;
   --fundo-card: #ffffff;
+}/* fim*/
+
+body {  /* Estilo básico do corpo da página */
+  font-family: Arial, Helvetica, sans-serif;/* Fonte principal */
+  line-height: 1.5em;/* Espaçamento entre linhas */
+  background-color: var(--fundo-principal);/* Cor de fundo da página */
+  color: var(--texto); /* Cor do texto */
 }
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5em;
-  background-color: var(--fundo-principal);
-  color: var(--texto);
-}
+header {/* Cabeçalho da página */
+  background-color: var(--destaque);/* Cor de fundo do cabeçalho */
+  color: var(--texto); /* Cor do texto no cabeçalho */
+  padding: 10px;/* Espaçamento interno */
+  display: flex; /* Layout flexível */
+  justify-content: flex-end;/* Alinha itens à direita */
+  align-content: center; /* Centraliza verticalmente */
+  position: sticky; /* Fixa no topo ao rolar a página */
+  top: 0;/* Posição no topo */
+  z-index: 1;  /* Mantém acima de outros elementos */
+}  /* fim */
 
-header {
-  background-color: var(--destaque);
-  color: var(--texto);
-  padding: 10px;
-  display: flex;
-  justify-content: flex-end;
-  align-content: center;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
+/* Menu de navegação (lista não ordenada) */
 nav#menu ul {
-  list-style: none;
-  display: flex;
-  gap: 10px;
-}
+  list-style: none;    /* Remove os marcadores da lista */
+  display: flex;       /* Exibe itens lado a lado */
+  gap: 10px;           /* Espaçamento entre os itens */
+}/* fim*/
 
+/* Links do menu */
 nav#menu a {
-  text-decoration: none;
-  color: var(--texto-inverso);
-  font-weight: 600;
-  padding: 12px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s color 0.3s;
-}
+  text-decoration: none;                         /* Remove sublinhado */
+  color: var(--texto-inverso);                   /* Cor do texto */
+  font-weight: 600;                              /* Negrito */
+  padding: 12px 15px;                            /* Espaçamento interno */
+  border-radius: 5px;                            /* Bordas arredondadas */
+  transition: background-color 0.3s color 0.3s;  /* Transição suave no hover */
+}/* fim*/
 
+/* Efeito de hover nos links do menu */
 nav#menu a:hover {
   background-color: var(--destaque-inverso);
   color: var(--destaque);
-}
+}/* fim*/
 
+/* Layout principal com grid */
 main {
   display: grid;
-  grid-template-columns: auto 90vw auto;
-  gap:20px;
-  margin-top: 20px;
-}
+  grid-template-columns: auto 90vw auto;  /* Coluna central com margens laterais */
+  gap: 20px;                              /* Espaço entre os elementos */
+  margin-top: 20px;                       /* Espaço abaixo do cabeçalho */
+}/* fim*/
 
+/* Seção de ficha (perfil) */
 section#ficha {
   background-color: var(--fundo-card);
   padding: 20px;
   border-radius: 8px;
-  grid-column: 2;
-}
+  grid-column: 2;      /* Centraliza a ficha na grade */
+}/* fim*/
 
+/* Imagem do perfil */
 section#ficha img.foto {
   width: 200px;
-  aspect-ratio: 1/1;
-  object-fit: cover;
+  aspect-ratio: 1/1;              /* Mantém formato quadrado */
+  object-fit: cover;              /* Corta a imagem proporcionalmente */
   overflow: hidden;
-  border-radius: 50%;
+  border-radius: 50%;             /* Deixa a imagem circular */
   border: 5px solid var(--fundo-card);
   outline: 5px solid var(--destaque);
   display: block;
   margin: auto;
   margin-bottom: 15px;
-}
+}/* fim*/
 
+/* Nome do perfil */
 section#ficha h1 {
   color: var(--destaque);
   margin: 15px 0;
@@ -96,47 +104,54 @@ section#ficha h1 {
   text-align: center;
 }
 
+/* Ícones das redes sociais */
 div#social {
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.6em;
   gap: 15px;
-}
+}/* fim*/
 
+/* Cores dos ícones sociais e efeito de transição */
 div#social {
   color: var(--destaque);
   transition: color 0.5s;
-}
+}/* fim*/
 
 div#social a:hover {
   color: var(--destaque-inverso);
   transition: color 0.5s;
-}
+}/* fim*/
 
+/* Seção de detalhes */
 section#detalhes {
   grid-column: 2;
 }
 
+/* Estilo dos artigos */
 article {
   background-color: var(--fundo-card);
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 8px;
-}
+}/* fim*/
 
+/* Títulos dos artigos */
 article h2 {
   color: var(--destaque);
   margin-bottom: 20px;
-}
+}/* fim*/
 
+/* Container de vídeos responsivos */
 .video-container {
   position: relative;
   width: 100%;
   margin: auto;
   aspect-ratio: 16/9;
-}
+}/* fim*/
 
+/* Vídeo (iframe) ocupa todo o container */
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -144,52 +159,59 @@ article h2 {
   width: 100%;
   height: 100%;
   border-radius: 8px;
-}
+}/* fim*/
 
+/* Container das habilidades (skills) */
 #skill-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 30px;
-}
+}/* fim*/
 
+/* Linha com nome e porcentagem da skill */
 #skill-container .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+}/* fim*/
 
+/* Nome da habilidade */
 #skill-container .nome {
   font-weight: bold;
   color: var(--texto);
-}
+}/* fim*/
 
+/* Porcentagem / cor da skill */
 #skill-container .porcent {
   font-weight: bold;
   height: 8px;
   color: var(--destaque);
   border-radius: 4px;
-}
+}/* fim*/
 
+/* Fundo da barra de progresso */
 #skill-container .barra {
   width: 100%;
   height: 10px;
   background-color: var(--fundo-principal);
   border-radius: 10px;
-}
+}/* fim*/
 
-
+/* Progresso preenchido da skill */
 #skill-container .progresso {
   height: 100%;
   background-color: var(--destaque-inverso);
   border-radius: 4px;
-}
+}/* fim*/
 
+/* Container da formação acadêmica */
 #formacao-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+}/* fim*/
 
+/* Estilo de cada curso */
 #formacao-container .curso {
   display: flex;
   flex-direction: column-reverse;
@@ -198,109 +220,114 @@ article h2 {
   border-left: 5px solid var(--destaque-inverso);
   padding-left: 15px;
   transition: border-width 1s, border-color 1s;
-}
+}/* fim*/
 
+/* Efeito ao passar o mouse sobre o curso */
 #formacao-container .curso:hover {
   border-left-width: 15px;
   border-color: var(--destaque);
   cursor: pointer;
-}
+}/* fim*/
 
+/* Texto do período do curso */
 #formacao-container .periodo {
   font-size: 0.8em;
   color: var(--texto);
   font-weight: bold;
-}
+}/* fim*/
 
+/* Nome da instituição */
 #formacao-container .instituicao {
   color: var(--destaque);
   font-size: 1.3em;
 }
 
+/* Container dos projetos */
 #projeto-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
+}/* fim*/
 
+/* Cartão de cada projeto */
 #projeto-container .projeto {
- display: flex;
- flex-direction: column-reverse;
- gap: 15px;
- background-color: var(--fundo-principal);
- padding: 10px;
- border-radius: 8px;
- border-left: 5px solid var(--destaque-inverso);
- transition: border-color 0.5s, border-width 0.5s;
-}
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 15px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
+  transition: border-color 0.5s, border-width 0.5s;
+}/* fim*/
 
+/* Efeito de hover no projeto */
 #projeto-container .projeto:hover {
   border-color: var(--destaque);
   border-left-width: 15px;
   cursor: pointer;
-}
+}/* fim*/
 
+/* Imagem do projeto */
 #projeto-container .foto {
   width: 100%;
   aspect-ratio: 16/9;
   object-fit: cover;
   overflow: hidden;
   border-radius: 8px;
-}
+}/* fim*/
 
+/* Rodapé da página */
 footer {
   background-color: var(--destaque);
   color: var(--texto-inverso);
   text-align: center;
   padding: 15px;
-}
+}/* fim*/
 
+/* Links do rodapé */
 footer a {
   color: var(--texto-inverso);
   text-decoration: none;
   font-weight: bold;
-}
+}/* fim*/
 
+/* Efeito hover nos links do rodapé */
 footer a:hover {
   color: var(--destaque-inverso);
-}
+}/* fim*/
 
-@media screen and (min-width: 768px){
-
+/* Ajustes para telas maiores (a partir de 768px) */
+@media screen and (min-width: 768px) {
   main {
-    grid-template-columns: auto 300px 1fr auto;
-  }
+    grid-template-columns: auto 300px 1fr auto;  /* Sidebar + conteúdo principal */
+  }/* fim*/
 
-  section#ficha{
+  section#ficha {
     grid-column: 2/3;
     height: fit-content;
     position: sticky;
     top: 100px;
-  }
+  }/* fim*/
 
   section#detalhes {
     grid-column: 3/4;
-  }
+  }/* fim*/
 
   #skill-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;  /* Divide as skills em duas colunas */
   }
-}
+}/* fim*/
 
+/* Ajuste dos projetos em layout desktop */
 #projeto-container .projeto {
   flex-direction: row-reverse;
   justify-content: space-between;
-}
+}/* fim*/
 
+/* Imagem dos projetos no desktop */
 #projeto-container .foto {
   aspect-ratio: 1/1;
-  max-width:20%;
+  max-width: 20%;
   max-height: 200px;
-}
-
-
-
-
-
-
-
+}/* fim*/
