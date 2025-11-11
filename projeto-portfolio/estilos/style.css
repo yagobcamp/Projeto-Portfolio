@@ -62,16 +62,16 @@ nav#menu a {
 
 /* Efeito de hover nos links do menu */
 nav#menu a:hover {
-  background-color: var(--destaque-inverso);
-  color: var(--destaque);
+  background-color: var(--destaque-inverso);   /* cor de fundo */
+  color: var(--destaque);                      /* cor do texto */
 }/* fim*/
 
 /* Layout principal com grid */
 main {
-  display: grid;
-  grid-template-columns: auto 90vw auto;  /* Coluna central com margens laterais */
-  gap: 20px;                              /* Espaço entre os elementos */
-  margin-top: 20px;                       /* Espaço abaixo do cabeçalho */
+  display: grid;/* Layout flexível em grades*/
+  grid-template-columns: auto 90vw auto;/* Coluna central com margens laterais */
+  gap: 20px;                            /* Espaço entre os elementos */
+  margin-top: 20px;                     /* Espaço abaixo do cabeçalho */
 }/* fim*/
 
 /* Seção de ficha (perfil) */
@@ -84,12 +84,12 @@ section#ficha {
 
 /* Imagem do perfil */
 section#ficha img.foto {
-  width: 200px;
+  width: 200px;    /* largura */
   aspect-ratio: 1/1;              /* Mantém formato quadrado */
   object-fit: cover;              /* Corta a imagem proporcionalmente */
   overflow: hidden;
   border-radius: 50%;             /* Deixa a imagem circular */
-  border: 5px solid var(--fundo-card);
+  border: 5px solid var(--fundo-card); /* borda em linha reta */
   outline: 5px solid var(--destaque);
   display: block;
   margin: auto;
@@ -98,7 +98,7 @@ section#ficha img.foto {
 
 /* Nome do perfil */
 section#ficha h1 {
-  color: var(--destaque);
+  color: var(--destaque); /* cor do texto */
   margin: 15px 0;
   font-size: 1.5em;
   text-align: center;
@@ -106,22 +106,23 @@ section#ficha h1 {
 
 /* Ícones das redes sociais */
 div#social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.6em;
+  display: flex;/* Layout flexível */
+  justify-content: center;/* controla o alinhamento entre ao redor */
+  align-items: center;/* texto centralizado na vertical  */
+  font-size: 1.6em; /* tamanho da fonte */
   gap: 15px;
 }/* fim*/
 
 /* Cores dos ícones sociais e efeito de transição */
 div#social {
-  color: var(--destaque);
-  transition: color 0.5s;
+  color: var(--destaque); /* cor do texto */
+  transition: color 0.5s; /* transição */
 }/* fim*/
 
+/* ponteiro do mouse sobre elemento */
 div#social a:hover {
-  color: var(--destaque-inverso);
-  transition: color 0.5s;
+  color: var(--destaque-inverso);/* cor do texto */
+  transition: color 0.5s;/* transição */
 }/* fim*/
 
 /* Seção de detalhes */
@@ -131,24 +132,24 @@ section#detalhes {
 
 /* Estilo dos artigos */
 article {
-  background-color: var(--fundo-card);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
+  background-color: var(--fundo-card);/* cor do fundo */
+  padding: 20px;/* preenchimento */
+  margin-bottom: 20px;/* margem de baixo */
+  border-radius: 8px;/* bordas redondas */
 }/* fim*/
 
 /* Títulos dos artigos */
 article h2 {
-  color: var(--destaque);
-  margin-bottom: 20px;
+  color: var(--destaque);/* cor do texto */
+  margin-bottom: 20px;/* margem de baixo */
 }/* fim*/
 
 /* Container de vídeos responsivos */
 .video-container {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  aspect-ratio: 16/9;
+  position: relative; /* Define que o elemento será posicionado de forma "relativa" à sua posição normal. Isso permite posicionar elementos filhos com 'position: absolute' em relação a ele. */
+  width: 100%; /* Faz o elemento ocupar 100% da largura do seu elemento pai.*/
+  margin: auto; /* Centraliza o elemento horizontalmente (se tiver uma largura definida e o contexto permitir). */
+  aspect-ratio: 16/9; /* Mantém a proporção entre largura e altura do elemento — neste caso, 16 unidades de largura para cada 9 de altura (proporção típica de vídeos e telas).*/
 }/* fim*/
 
 /* Vídeo (iframe) ocupa todo o container */
@@ -191,7 +192,7 @@ article h2 {
 
 /* Fundo da barra de progresso */
 #skill-container .barra {
-  width: 100%;
+  width: 100%; /* Faz o elemento ocupar 100% da largura do seu elemento pai.*/
   height: 10px;
   background-color: var(--fundo-principal);
   border-radius: 10px;
@@ -199,7 +200,7 @@ article h2 {
 
 /* Progresso preenchido da skill */
 #skill-container .progresso {
-  height: 100%;
+  height: 100%;/* Faz o elemento ocupar 100% da altura do seu elemento pai.*/
   background-color: var(--destaque-inverso);
   border-radius: 4px;
 }/* fim*/
