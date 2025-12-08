@@ -274,6 +274,10 @@ footer a:hover {
   justify-content: space-between;
 }
 
+#projeto-container .projeto-info {
+  max-width: 80%;
+}
+
 #projeto-container .foto {
   aspect-ratio: 1/1;
   max-width:20%;
